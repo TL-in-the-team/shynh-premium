@@ -164,6 +164,29 @@ jQuery(document).ready(function(){
     kenEvents.gotEffects();
     kenEvents.menuEffects();
     kenEvents.popup();
+
+    $('#main-slider__carousel').owlCarousel({
+        items:1,
+        lazyLoad: true,
+        nav:false,
+        // center:true,
+        // autoWidth:true,
+        loop: true,
+        mouseDrag: true,
+        dots:true,
+    });
+
+    $('#welcome__carousel').owlCarousel({
+        items:1,
+        lazyLoad: true,
+        nav:false,
+        // center:true,
+        // autoWidth:true,
+        loop: true,
+        mouseDrag: true,
+        dots:true,
+    });
+    
 })
 jQuery(function () {
     function logElementEvent(eventName, element) {

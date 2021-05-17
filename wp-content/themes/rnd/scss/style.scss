@@ -7,14 +7,14 @@
 @import "layouts/header";
 @import "layouts/aside";
 @import "layouts/footer";
-/*===== PAGES =====*/
-@import "pages/home/home_mb";
-@import "pages/home/home_tablet";
-@import "pages/home/home_pc";
 // /*===== UTILITIES =====*/
 @import "utilities/animate";
 @import "utilities/hover";
 @import "utilities/fancybox";
-@import "utilities/owl.carousel";
-@import "utilities/owl.theme.default";
 @import "utilities/font-awesome";
+@import "utilities/owl.carousel";
+@import "utilities/_owl.theme.default";
+/*===== PAGES =====*/
+@import "pages/home/home_mb";
+@import "pages/home/home_tablet";
+@import "pages/home/home_pc";

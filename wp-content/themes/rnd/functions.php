@@ -34,12 +34,15 @@ function remove_admin_bar() {
     show_admin_bar(false);
 }
 
+
 //ADD SCRIPTS
 function add_theme_scripts() {
     wp_enqueue_style( 'font-style', 'https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Philosopher:wght@700&display=swap', array(), '1.0', 'all' );
+    wp_enqueue_style( 'font-style-philosopher', 'https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&display=swap', array(), '1.0', 'all' );
     wp_enqueue_style( 'style', get_template_directory_uri().'/css/style.min.css', array(), '1.0', 'all' );
     wp_deregister_script('jquery');
-    wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js', array(), null, true);
+    wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js', array(), null, TRUE);
+    wp_enqueue_script('owl-carouse', get_template_directory_uri() . "/js/add-ons/owl.carousel.min.js", array(), '1.0', TRUE);
     wp_enqueue_script( 'script', get_template_directory_uri() . '/js/scripts.min.js', array ( 'jquery' ), 1.1, true);
 }
 
