@@ -47,6 +47,33 @@ h2,
     letter-spacing: 0.6rem;
   }
 }
+h2.setTitle {
+  text-align: center;
+  position: relative;
+  padding-bottom: 40px;
+
+  @include breakpoint-up(large) {
+    padding-bottom: 80px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 11px;
+    width: 120px;
+    height: 23px;
+    background-image: url("../images/wIcon.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    @include breakpoint-up(large) {
+      bottom: 22px;
+      width: 190px;
+    }
+  }
+}
 h3,
 .h3 {
   font-size: 1.5rem;

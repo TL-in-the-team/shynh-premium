@@ -43,17 +43,17 @@
 <section class="welcome">
   <div class="container">
     <div class="welcome__wrapper">    
-      <h2 class="welcome__title">WELCOME</h2>
+      <h2 class="welcome__title setTitle">WELCOME</h2>
       <p class="welcome__desc">Welcome to SHYNH PREMIUM. When you walk through our doors, you will immediately feel a sense of relaxation. Soothing colors, soft music and lovely aromas transport you to a place of peace and serenity. Customers will enjoy a 5-star-class relaxation space as well as excellent services at SHYNH PREMIUM.  Proud to be a top 1 beauty clinic leading high-tech beauty trend nowadays, honored to accompany millions of women in the beauty journey.</p>
       <div class="welcome__slider-showcase-wrapper">
-        <div id="xxxwelcome__carousel" class="welcome__slider">
+        <div id="welcome__carousel" class="welcome__slider owl-carousel owl-theme">
           <div class="welcome__item">
             <div class="welcome__item__wrapper">
               <img src="<?php echo get_theme_file_uri('/images/wslider1.webp') ?>" alt="alt" title="title" class="welcome__item__img">
               <h3 class="welcome__item__desc">DA NANG CITY</h3>
             </div>
           </div>   
-          <!-- <div class="welcome__item">
+          <div class="welcome__item">
             <div class="welcome__item__wrapper">
               <img src="<?php echo get_theme_file_uri('/images/wslider2.webp') ?>" alt="alt" title="title" class="welcome__item__img">
               <h3 class="welcome__item__desc">DA NANG CITY</h3>
@@ -64,7 +64,7 @@
               <img src="<?php echo get_theme_file_uri('/images/wslider3.webp') ?>" alt="alt" title="title" class="welcome__item__img">
               <h3 class="welcome__item__desc">DA NANG CITY</h3>
             </div>
-          </div>    -->
+          </div>   
         </div>   
         <div class="welcome__showcase">
             <span class="welcome__showcase__item">
@@ -86,7 +86,7 @@
 </section>
 <section class="our-services">
   <div class="container">
-    <h2 class="our-services__title">OUR SERVICES</h2>
+    <h2 class="our-services__title setTitle">OUR SERVICES</h2>
     <div class="our-services__wrapper">
       <div class="our-services__block">
         <a href="#" class="our-services__item">
@@ -147,7 +147,7 @@
   </div>
 </section>
 <section class="enjoy-difference">
-  <h2 class="enjoy-difference__title">ENJOY THE DIFFERENCE</h2>
+  <h2 class="enjoy-difference__title setTitle">ENJOY THE DIFFERENCE</h2>
   <div id="enjoy-difference__slider" class="enjoy-difference__slider owl-carousel owl-theme">
     <div class="enjoy-difference__item">
       <a href="#" class="enjoy-difference__item__link">
