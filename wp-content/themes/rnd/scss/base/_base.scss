@@ -40,9 +40,11 @@ h2,
   letter-spacing: 0.3rem;
   @include breakpoint-up(small) {
     font-size: 3rem;
+    letter-spacing: 0.45rem;
   }
   @include breakpoint-up(medium) {
     font-size: 4rem;
+    letter-spacing: 0.6rem;
   }
 }
 h3,
@@ -63,7 +65,7 @@ h3,
   width: 100% !important;
   position: relative;
   @media only screen and (min-width: 1200px) {
-    max-width: 1372px !important;
+    max-width: 1578px !important;
   }
   ol {
     padding-left: 18px;
