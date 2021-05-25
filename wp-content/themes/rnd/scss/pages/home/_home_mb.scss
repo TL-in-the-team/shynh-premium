@@ -1,0 +1,413 @@
+.main-slider {
+  &__wrapper {
+    .owl-dots {
+      padding-top: 30px;
+      width: 200px;
+      margin: 0 auto;
+      button {
+        &.active {
+          outline: none;
+        }
+        &:focus {
+          outline: none;
+        }
+      }
+
+      .owl-dot {
+        display: inline-block;
+        span {
+          margin: 5px 4px;
+          background-color: #f2f2f2;
+        }
+        &.active {
+          span {
+            background-color: #ebc663;
+            outline: none;
+          }
+        }
+        &:hover {
+          span {
+            background-color: #ebc663;
+          }
+        }
+      }
+    }
+  }
+
+  &__item {
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    max-width: 420px;
+  }
+
+  &__item__img-wrapper {
+    display: block;
+    position: relative;
+
+    img {
+      display: block;
+    }
+  }
+
+  &__item__info {
+    position: absolute;
+    z-index: 3;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 67px;
+    background-color: #c68e50;
+  }
+
+  &__item__heading {
+    display: none;
+  }
+
+  &__item__title {
+    font-size: 2.5rem;
+    font-weight: 400;
+    line-height: 67px;
+    color: #fff;
+    text-align: center;
+  }
+
+  &__item__desc {
+    display: none;
+  }
+
+  &__item__book-now {
+    display: none;
+  }
+}
+
+.welcome {
+  margin-top: 65px;
+
+  &__wrapper {
+  }
+
+  &__title {
+  }
+
+  &__desc {
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 0 8px;
+    margin-top: 10px;
+  }
+
+  &__slider-showcase-wrapper {
+  }
+
+  &__slider {
+    margin-top: 18px;
+
+    .owl-dots {
+      padding-top: 13px;
+      width: 200px;
+      margin: 0 auto;
+
+      button {
+        &.active {
+          outline: none;
+        }
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      .owl-dot {
+        display: inline-block;
+        span {
+          margin: 5px 4px;
+          background-color: #f2f2f2;
+        }
+
+        &.active {
+          span {
+            background-color: #ebc663;
+            outline: none;
+          }
+        }
+
+        &:hover {
+          span {
+            background-color: #ebc663;
+          }
+        }
+      }
+    }
+  }
+
+  &__item {
+    @include flex;
+  }
+
+  &__item__wrapper {
+    position: relative;
+    width: 370px;
+    margin: 0 auto;
+  }
+
+  &__item__img {
+    display: block;
+  }
+
+  &__item__desc {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 46px;
+    background-color: rgba($color: #c1c2c5, $alpha: 0.97);
+    text-align: center;
+    line-height: 46px;
+    font-weight: 700;
+    font-size: 2rem;
+    color: #fff;
+    letter-spacing: 0.3rem;
+  }
+
+  &__showcase {
+    margin-top: 35px;
+    @include flex;
+    @include flex-direction(column);
+  }
+
+  &__showcase__item {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #333333;
+    @include flex;
+    @include align-items(center);
+    margin-bottom: 14px;
+  }
+
+  &__showcase__item-header {
+    font-family: Philosopher;
+    font-weight: 700;
+    font-size: 3.4rem;
+    color: #333333;
+    line-height: 48px;
+    height: 48px;
+    background-color: #f2f2f2;
+    display: block;
+    padding: 0 20px;
+    margin-right: 14px;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: -6px;
+      width: 13.5px;
+      height: 0.5px;
+      background-color: #929292;
+    }
+  }
+}
+
+.our-services {
+  margin-top: 54px;
+
+  &__title {
+  }
+
+  &__wrapper {
+    @include flex;
+    @include flex-direction(column);
+    @include align-items(center);
+    margin-top: 20px;
+  }
+
+  &__block {
+    @include flex;
+    @include justify-content(center);
+    @include flex-wrap;
+    margin-left: 2px;
+    margin-right: 2px;
+    width: 343px;
+  }
+
+  &__item {
+    width: calc(50% - 4px);
+    flex-basis: calc(50% - 4px);
+
+    @include flex;
+    @include align-items(center);
+    @include justify-content(center);
+    margin-bottom: 8px;
+    position: relative;
+
+    &:hover {
+      .our-services__item__img-holder {
+        background-color: #ecc972;
+      }
+    }
+  }
+
+  &__item__img-holder {
+    width: 160px;
+    height: 160px;
+    background-color: #f7f7f7;
+    @include flex;
+    @include transition(0.3s);
+  }
+
+  &__item__img {
+    display: block;
+    margin: auto auto;
+    width: 110px;
+    height: 110px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+    top: -20px;
+  }
+
+  &__item__title {
+    position: absolute;
+    bottom: 22px;
+    font-family: Philosopher;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #333333;
+    text-align: center;
+    width: 120px;
+  }
+
+  &__middle-block {
+    display: none;
+  }
+
+  &__middle-block__img {
+    display: block;
+  }
+}
+
+.enjoy-difference {
+  margin-top: 112px;
+  &__title {
+  }
+
+  &__slider {
+    margin-top: 44px;
+
+    .owl-dots {
+      padding-top: 20px;
+      width: 200px;
+      margin: 0 auto;
+
+      button {
+        &.active {
+          outline: none;
+        }
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      .owl-dot {
+        display: inline-block;
+        span {
+          margin: 5px 4px;
+          background-color: #f2f2f2;
+        }
+
+        &.active {
+          span {
+            background-color: #ebc663;
+            outline: none;
+          }
+        }
+
+        &:hover {
+          span {
+            background-color: #ebc663;
+          }
+        }
+      }
+    }
+  }
+
+  &__item {
+    @include flex;
+  }
+
+  &__item__link {
+    width: 312px;
+    margin: 0 14px;
+  }
+
+  &__item__img {
+    display: block;
+  }
+}
+
+.ambassador {
+  margin-top: 120px;
+  &__slider {
+  }
+
+  &__item {
+    @include flex;
+    @include flex-direction(column);
+    @include align-items(center);
+  }
+
+  &__item__img-holder {
+  }
+
+  &__item__img {
+  }
+
+  &__item__info {
+    &__quote {
+      margin-top: 124px;
+      font-size: 1.2rem;
+      font-weight: 400;
+      line-height: 2rem;
+      color: #444444;
+      width: 348px;
+      text-align: center;
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        top: -92px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 74px;
+        height: 54px;
+        background-image: url("../images/quote.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
+
+    &__name {
+      margin-top: 40px;
+      text-align: center;
+      font-size: 1.6rem;
+      color: #333333;
+      letter-spacing: 0;
+    }
+
+    &__title {
+      margin-top: 13px;
+      font-family: Philosopher;
+      font-weight: 700;
+      font-size: 1.6rem;
+      color: #666666;
+      text-align: center;
+      display: block;
+      width: 100%;
+    }
+  }
+}

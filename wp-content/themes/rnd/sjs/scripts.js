@@ -186,6 +186,44 @@ jQuery(document).ready(function(){
         mouseDrag: true,
         dots:true,
     });
+
+    $('#ambassador__slider').owlCarousel({
+        items:1,
+        lazyLoad: true,
+        nav:false,
+        // center:true,
+        // autoWidth:true,
+        loop: true,
+        mouseDrag: true,
+        dots:true,
+    });    
+    
+    $('#enjoy-difference__slider').owlCarousel({
+        // items:1,
+        lazyLoad: true,
+        nav:false,
+        center:true,
+        autoWidth:true,
+        loop: true,
+        mouseDrag: true,
+        dots:true,
+        responsive:{
+            0:{
+                items:1,                
+            },
+            767:{
+                items:1,                
+            },
+            980:{
+                items:2,                
+            },
+            1199:{
+                items:3,
+                // center:true,
+                autoWidth:false,               
+            }
+        }
+    });
     
 })
 jQuery(function () {
