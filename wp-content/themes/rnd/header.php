@@ -17,4 +17,15 @@ global $home_id;
 
 <body <?php body_class() ?>><span class="toppoint"></span>
 <header class="header">
+    <div class="container">
+        <a href="<?php bloginfo('home') ?>" title="<?php bloginfo('name') ?>" class="header__logo">
+            <img src="<?php bloginfo('template_directory') ?>/images/icon-shynh-premium.png" width="180" height="150" alt="<?php bloginfo('name') ?>" title="<?php bloginfo('name') ?>"/>
+        </a>
+        <span class="header__menutab">
+            <span></span>
+        </span>
+        <span class="header__search">
+            <img src="<?php bloginfo('template_directory') ?>/images/icon-search.png" alt="" title=""/>
+        </span>
+    </div>
 </header>
