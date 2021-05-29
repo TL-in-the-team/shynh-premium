@@ -1,3 +1,51 @@
 .header{
-   
+    padding: 0.5rem 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    &__menutab{
+        width: 3rem;
+        height: 3rem;
+        display: block;
+        position: fixed;
+        left: 1rem;
+        top: 1rem;
+        &.actived{
+            span{
+                opacity: 0;
+            }
+            &:before{
+                @include transform(rotate(38deg));
+                top: 9px;
+            }
+            &::after{
+                @include transform(rotate(-38deg));
+                bottom: 9px;
+            }
+        }
+        span,
+        &:before,
+        &:after{
+            content: '';
+            width: 100%;
+            display: block;
+            height: 2px;
+            background: $black;
+            border-radius: 5px;
+            position: relative;
+            @include transition_default(0.5s);
+        }
+        span{
+            margin: 0.7rem 0;
+        }
+    }
+    &__logo{
+        img{
+            max-width: 80px;
+            display: block;
+            margin: 0 auto;
+        }
+    }
 }

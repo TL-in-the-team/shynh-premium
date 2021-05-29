@@ -12,7 +12,9 @@
 /**
  * Lavo Coporation Template only works in WordPress 7 or later.
  */
+define('SHYNH','SHYNH');
 include get_theme_file_path( '/inc/common.php' );
+include get_theme_file_path( '/inc/short-code.php' );
 
 add_action('wp_head','custom_wp_head');
 add_action('admin_head','custom_wp_head');
@@ -174,7 +176,7 @@ class WPDocs_Walker_Nav_Menu extends Walker_Nav_Menu {
             $args->link_before,
             apply_filters( 'the_title', $item->title, $item->ID ),
             $args->link_after,
-            $args->after
+            $args->after 
         );
         $output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
     }

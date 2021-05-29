@@ -1,19 +1,11 @@
+<?php /* Template Name:  Home Page*/  ?>
 <?php get_header() ?>
-
-<section class="main-slider">  
-  <div id="main-slider__carousel" class="main-slider__wrapper owl-carousel owl-theme">
-    <div href="#" class="main-slider__item">
-      <picture class="main-slider__item__img-wrapper">
-        <source media="(min-width: 768px)" srcset="<?php echo get_theme_file_uri('/images/slider1.webp') ?>"/>
-        <img alt="A lazy image" title="Title" class="lazy" src="<?php echo get_theme_file_uri('/images/mslider1.webp') ?>" />
-      </picture>
-      <div class="main-slider__item__info">
-        <h1 class="main-slider__item__heading">SHYNH PREMIUM</h1>
-        <h3 class="main-slider__item__title">A High-Tech Spa & Beauty Clinic</h3>
-        <p class="main-slider__item__desc">with the mission of bringing customers the highest quality beauty experience.</p>
-        <a href="#" class="main-slider__item__book-now">Book Now</a>
-      </div>
+<section class="sbanner">
+    <div class="container">
+        
     </div>
+<<<<<<< HEAD
+=======
     <div href="#" class="main-slider__item">
       <picture class="main-slider__item__img-wrapper">
         <source media="(min-width: 768px)" srcset="<?php echo get_theme_file_uri('/images/slider2.webp') ?>"/>
@@ -43,7 +35,7 @@
 <section class="welcome">
   <div class="container">
     <div class="welcome__wrapper">    
-      <h2 class="welcome__title">WELCOME</h2>
+      <h2 class="welcome__title setTitle">WELCOME</h2>
       <p class="welcome__desc">Welcome to SHYNH PREMIUM. When you walk through our doors, you will immediately feel a sense of relaxation. Soothing colors, soft music and lovely aromas transport you to a place of peace and serenity. Customers will enjoy a 5-star-class relaxation space as well as excellent services at SHYNH PREMIUM.  Proud to be a top 1 beauty clinic leading high-tech beauty trend nowadays, honored to accompany millions of women in the beauty journey.</p>
       <div class="welcome__slider-showcase-wrapper">
         <div id="welcome__carousel" class="welcome__slider owl-carousel owl-theme">
@@ -86,7 +78,7 @@
 </section>
 <section class="our-services">
   <div class="container">
-    <h2 class="our-services__title">OUR SERVICES</h2>
+    <h2 class="our-services__title setTitle">OUR SERVICES</h2>
     <div class="our-services__wrapper">
       <div class="our-services__block">
         <a href="#" class="our-services__item">
@@ -147,7 +139,7 @@
   </div>
 </section>
 <section class="enjoy-difference">
-  <h2 class="enjoy-difference__title">ENJOY THE DIFFERENCE</h2>
+  <h2 class="enjoy-difference__title setTitle">ENJOY THE DIFFERENCE</h2>
   <div id="enjoy-difference__slider" class="enjoy-difference__slider owl-carousel owl-theme">
     <div class="enjoy-difference__item">
       <a href="#" class="enjoy-difference__item__link">
@@ -202,8 +194,6 @@
       </div>
     </div>
   </div>
+>>>>>>> a2b84aeb40a3acbc81d685df57a693a096dd82b0
 </section>
-
-<section style="height:1000px" class="temp"></section>
-
 <?php get_footer() ?>

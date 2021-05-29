@@ -1,3 +1,61 @@
 .footer{
-    
+    &__copyright{
+        display: none;
+        text-align: center;
+        background: $black;
+        color: $white_grey;
+        padding: 2.5rem;
+    }
+    .widget_custom_html{
+        &:nth-child(1),
+        &:nth-child(2){
+            display: none;
+        }
+    }
+    &__promo{
+        background: $gray;
+        padding: 2.5rem 0;
+        margin: 0 -16px;
+        text-align: center;
+        &--tit{
+            text-transform: uppercase;
+            strong{
+                font-size: 1.4rem;
+            }
+        }
+        &__around{
+            max-width: 340px;
+            margin: 0 auto;
+        }
+        .form__email{
+            margin-top: 2rem;
+        }
+    }
+}
+.form{
+    &__email{
+        border: 1px solid $grey;
+        @include flex;
+        input{
+            border: none;
+            padding: 0.5rem 1rem;
+            outline: none;
+            flex: 1;
+        }
+        label{
+            padding: 0 1.6rem;
+            background: #fff;
+            position: relative;
+            &:after{
+                content: '';
+                position: absolute;
+                height: 80%;
+                width: 1px;
+                background: $gray;
+                display: block;
+                left: 0;
+                top: 10%;
+            }
+        }
+    }
 }
