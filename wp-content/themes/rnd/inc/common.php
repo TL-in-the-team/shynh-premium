@@ -3,6 +3,11 @@ add_theme_support( 'post-thumbnails' );
 add_image_size( 'news-thumb', 356, 246, true );
 add_image_size( 'blog-thumb', 1168, 622,true );
 
+add_filter( 'upload_mimes', 'my_myme_types', 1, 1 );
+function my_myme_types( $mime_types ) {
+    $mime_types['webp'] = 'image/webp';
+    return $mime_types;
+}
 
 function get_current_term(){
     if (!is_category() && !is_tag() && !is_tax())
