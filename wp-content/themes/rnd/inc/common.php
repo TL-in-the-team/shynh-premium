@@ -14,3 +14,25 @@ function get_top_term($term){
     endif;
     return $term;
 }
+
+function imageEncode($path){
+    $path  = THEMES_DIR."/".$path;
+    $image = file_get_contents($path);
+    $finfo = new finfo(FILEINFO_MIME_TYPE);
+    $type  = $finfo->buffer($image);
+    return "data:".$type.";charset=utf-8;base64,".base64_encode($image);
+}
+
+function imageEncodePath($path){
+    $image = file_get_contents($path);
+    $finfo = new finfo(FILEINFO_MIME_TYPE);
+    $type  = $finfo->buffer($image);
+    return "data:".$type.";charset=utf-8;base64,".base64_encode($image);
+}
+
+function imageEncodeURL($path){
+    $image = file_get_contents($path);
+    $finfo = new finfo(FILEINFO_MIME_TYPE);
+    $type  = $finfo->buffer($image);
+    return "data:".$type.";charset=utf-8;base64,".base64_encode($image);
+}

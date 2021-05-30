@@ -25,7 +25,16 @@ global $home_id;
             <span></span>
         </span>
         <span class="header__search">
-            <img src="<?php bloginfo('template_directory') ?>/images/icon-search.png" alt="" title=""/>
+            <img src="<?php echo imageEncode('/images/icon-search.png') ?>" alt="" title=""/>
         </span>
     </div>
+    <?php 
+        wp_nav_menu(
+            array(
+                'menu'              =>  2,
+                'menu_class'        => 'header__menu',
+                'container_class'   =>  'header__menuround',
+            )
+        );
+    ?>
 </header>
