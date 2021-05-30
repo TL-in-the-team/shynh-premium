@@ -32,10 +32,10 @@ h1,
   color: #333333;
   font-weight: 700;
   font-family: Philosopher;
-  @include breakpoint-up($xs) {
+  @include breakpoint-up('xs') {
     font-size: 4.5rem;
   }
-  @include breakpoint-up($md) {
+  @include breakpoint-up('md') {
     font-size: 5.5rem;
   }
 }
@@ -46,11 +46,11 @@ h2,
   font-family: Philosopher;
   color: #444444;
   letter-spacing: 0.3rem;
-  @include breakpoint-up($xs) {
+  @include breakpoint-up('xs') {
     font-size: 3rem;
     letter-spacing: 0.45rem;
   }
-  @include breakpoint-up($md) {
+  @include breakpoint-up('md') {
     font-size: 4rem;
     letter-spacing: 0.6rem;
   }
@@ -86,10 +86,10 @@ h3,
 .h3 {
   font-size: 1.5rem;
   font-family: Philosopher;
-  @include breakpoint-up($xs) {
+  @include breakpoint-up('xs') {
     font-size: 2.5rem;
   }
-  @include breakpoint-up($md) {
+  @include breakpoint-up('md') {
     font-size: 3.5rem;
   }
 }
