@@ -7,7 +7,7 @@
     background: #fff;
     display: none;
     &__menutab{
-        @include breakpoint-down($md) {
+        @include breakpoint-down('md') {
             width: 40px;
             height: 40px;
             display: block;

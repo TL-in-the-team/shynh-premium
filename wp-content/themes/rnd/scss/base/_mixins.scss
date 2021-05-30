@@ -10,7 +10,6 @@ $gray: #E6E6E6;
 $white: #FFFFFF;
 $xs: 576px;
 $sm: 768px;
-$sm: 768px;
 $md: 992px;
 $lg: 1200px;
 @mixin transition($param) {
@@ -69,16 +68,18 @@ $lg: 1200px;
 
 // 768px, 1024px, 1200px
 $breakpoints-up: (
-  "medium": "48em",
-  "large": "64em",
-  "xlarge": "75em",
+  "xs": "576px",
+  "sm": "768px",
+  "md": "992px",
+  "lg": "1200px"
 );
 
 // 767px, 1023px, 1199px
 $breakpoints-down: (
-  "small": "47.938em",
-  "medium": "63.9375em",
-  "large": "74.938em",
+  "xs": "575px",
+  "sm": "767px",
+  "md": "991px",
+  "lg": "1199px"
 );
 
 @mixin breakpoint-up($size) {
