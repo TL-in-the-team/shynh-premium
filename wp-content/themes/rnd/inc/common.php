@@ -1,7 +1,7 @@
 <?php
 add_theme_support( 'post-thumbnails' );
-add_image_size( 'post-thumbnail news-size', 356, 246, true );
-add_image_size( 'post-thumbnail blog-size', 1168, 622,true );
+add_image_size( 'news-thumb', 356, 246, true );
+add_image_size( 'blog-thumb', 1168, 622,true );
 
 
 function get_current_term(){
