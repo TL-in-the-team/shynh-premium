@@ -16,7 +16,7 @@ global $home_id;
 </head>
 
 <body <?php body_class() ?>><span class="toppoint"></span>
-<header class="header">
+<header class="header header__normal">
     <div class="container">
         <a href="<?php bloginfo('home') ?>" title="<?php bloginfo('name') ?>" class="header__logo">
             <img src="<?php echo imageEncode('/images/icon-shynh-premium.png') ?>" width="180" height="150" alt="<?php bloginfo('name') ?>" title="<?php bloginfo('name') ?>"/>
@@ -27,14 +27,14 @@ global $home_id;
         <span class="header__search">
             <img src="<?php echo imageEncode('/images/icon-search.png') ?>" alt="" title=""/>
         </span>
+        <?php 
+            wp_nav_menu(
+                array(
+                    'menu'              =>  2,
+                    'menu_class'        => 'header__menu',
+                    'container_class'   =>  'header__menuround',
+                )
+            );
+        ?>
     </div>
-    <?php 
-        wp_nav_menu(
-            array(
-                'menu'              =>  2,
-                'menu_class'        => 'header__menu',
-                'container_class'   =>  'header__menuround',
-            )
-        );
-    ?>
 </header>
