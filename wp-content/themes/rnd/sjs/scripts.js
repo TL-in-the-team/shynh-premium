@@ -6,9 +6,13 @@ kenEvents.current_height = function () {
     return Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
 }
 kenEvents.menu = function () {
-    jQuery('.header__buttonmb').click(function(){
+    jQuery('.header__menutab').click(function(){
         jQuery(this).toggleClass('actived');
-        jQuery('.header__menu').toggleClass('actived');
+        jQuery('.header__menuround').toggleClass('actived');
+    })
+    jQuery('.menu-item-has-children').click(function(){
+        jQuery(this).toggleClass('actived');
+        return false;
     })
 }
 kenEvents.scrollToId = function () {

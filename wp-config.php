@@ -1,5 +1,6 @@
 <?php
 define( 'WP_CACHE', false ); // Added by WP Rocket
+define( 'THEMES_DIR',  dirname( __FILE__ ) . '/wp-content/themes/rnd' );
 
 //define( 'WP_CACHE', true ); // Added by WP Rocket
 
