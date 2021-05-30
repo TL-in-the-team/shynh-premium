@@ -1,11 +1,105 @@
 .header{
-    padding: 8px 0;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     background: #fff;
-    display: none;
+    @include breakpoint-down('md') {
+        padding: 8px 0;
+    }
+    a{
+        @include transition_default(0.3s);
+    }
+    &__fixed{
+        .container{
+            @include breakpoint-up('md') {
+                @include flex;
+                .header__logo{
+                    img{
+                        width: 100px;
+                        height: auto;
+                    }
+                }
+            }
+        }
+    }
+    &__normal{
+        @include breakpoint-up('md') {
+            text-align: center;
+            .header__menuround{
+                margin: 50px auto 0 auto;
+                display: table;
+                padding: 0 24px;
+                border-bottom: 1px solid $white_grey;
+            }
+            .header__menu{
+                list-style-type: none;
+                @include flex;
+                @include justify-content(center);
+                .current-menu-item{}
+                .menu-item{
+                    &.current-menu-item,
+                    &:hover{
+                        >a{
+                            &:after{
+                                width: 100%;
+                            }
+                        }
+                    }
+                    >a{
+                        &:after{
+                            content: '';
+                            position: absolute;
+                            bottom: -1.5px;
+                            left: 0;
+                            width: 0;
+                            height: 3px;
+                            background-color: $black;
+                            @include transition_default(0.3s);
+                        }
+                    }
+                    a{
+                        text-transform: uppercase;
+                        font-size: 2rem;
+                        font-weight: 500;
+                        padding: 16px 24px;
+                        display: block;
+                        position: relative;
+                    }
+                }
+                .menu-item-has-children{
+                    position: relative;
+                    &:hover{
+                        .sub-menu{
+                            height: auto;
+                        }
+                    }
+                    .sub-menu{
+                        overflow: hidden;
+                        position: absolute;
+                        width: 320px;
+                        text-align: left;
+                        padding-top: 20px;
+                        height: 0;
+                        .menu-item{
+                            border: 1px solid $black_light;
+                            border-top: 0;
+                            background: $gray;
+                            &:hover{
+                                a{
+                                    background: $yellow;
+                                    color: $white;
+                                }
+                            }
+                            &:first-child{
+                                border-top: 1px solid $black_light;
+                            }
+                        }
+                    }   
+                }
+            }
+        }
+    }
     &__menutab{
         @include breakpoint-down('md') {
             width: 40px;
@@ -45,26 +139,29 @@
         }
     }
     &__search{
-        @include breakpoint-down($md) {
+        @include breakpoint-down('md') {
             position: fixed;
             top: 16px;
             right: 16px;
         }
-        @include breakpoint-up($lg) {
+        @include breakpoint-up('md') {
             display: none;
         }
     }
     &__logo{
-        @include breakpoint-down($md) {
+        @include breakpoint-down('md') {
             img{
                 max-width: 80px;
                 display: block;
                 margin: 0 auto;
             }
         }
+        @include breakpoint-up('md') {
+            
+        }
     }
     &__menu{
-        @include breakpoint-down($md) {
+        @include breakpoint-down('md') {
             &round{
                 @include transition_default(0.3s);
                 overflow: hidden;
@@ -90,7 +187,6 @@
                     color: #fff;
                     padding: 16px 16px;
                     display: block;
-
                 }
                 .sub-menu{
                     padding-left: 32px;

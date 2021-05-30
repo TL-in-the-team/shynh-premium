@@ -2,7 +2,7 @@
 <?php get_header() ?>
 <section class="sbanner">
     <div class="container">
-        <h1 class="maintit">Our Services</h1>
+        <!-- <h1 class="maintit">Our Services</h1> -->
         <!-- <?php 
             echo imageEncode('/images/icon-tit.png');
         ?> -->
