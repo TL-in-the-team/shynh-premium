@@ -212,7 +212,13 @@
 
 .our-services {
   margin-top: 54px;
+<<<<<<< HEAD
+  @include breakpoint-up(large) {
+    margin-top: 210px;
+  }
+=======
 
+>>>>>>> 935310c2a23c77342f04fd15893f5cb614fcbfb0
   &__title {
   }
 
