@@ -14,6 +14,7 @@
  */
 define('SHYNH','SHYNH');
 include get_theme_file_path( '/inc/common.php' );
+include get_theme_file_path( '/inc/short-code-post-type.php' );
 include get_theme_file_path( '/inc/short-code.php' );
 
 add_action('wp_head','custom_wp_head');
