@@ -1,0 +1,117 @@
+.contact {
+  &__container {
+    max-width: 1202px !important;
+    margin-bottom: 40px;
+  }
+  &__map {
+    width: 100%;
+    height: 266px;
+    @include breakpoint-up(lg) {
+      height: 600px;
+    }
+  }
+  &__info {
+    margin-top: 32px;
+    @include breakpoint-up(lg) {
+      @include flex;
+      @include justify-content(space-between);
+    }
+
+    &__detail {
+    }
+    &__detail-block {
+      margin-top: 12px;
+
+      @include breakpoint-up(lg) {
+        margin: 44px 0;
+      }
+    }
+    &__detail-title {
+      letter-spacing: normal;
+
+      @include breakpoint-up(lg) {
+        font-size: 2rem;
+        margin-bottom: 10px;
+      }
+    }
+    &__detail-info {
+      padding: 6px 6px 6px 21px;
+      background-repeat: no-repeat;
+      background-position: -3px 5px;
+
+      @include breakpoint-up(lg) {
+        font-size: 1.5rem;
+        display: block;
+        margin: 4px 0;
+      }
+
+      &.map-icon {
+        background-image: url("../images/mapIcon.png");
+      }
+      &.web-icon {
+        background-image: url("../images/webIcon.png");
+      }
+      &.email-icon {
+        background-image: url("../images/mailIcon.png");
+      }
+      &.cellphone-icon {
+        background-image: url("../images/contactIcon.png");
+      }
+      &.time-icon {
+        background-image: url("../images/timeOpenIcon.png");
+      }
+    }
+  }
+
+  &__info__register {
+    margin-top: 32px;
+
+    @include breakpoint-up(lg) {
+      margin-top: 44px;
+      max-width: 800px;
+      @include flex;
+      @include flex-wrap;
+      margin-left: -23px;
+      margin-left: -23px;
+    }
+  }
+
+  &__info__register__input {
+    width: 100%;
+    padding: 8px 0;
+    margin: 8px 0;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #696969;
+    color: $black;
+    font-size: 1.5rem;
+    &::placeholder {
+      color: $black;
+      font-size: 1.5rem;
+    }
+
+    @include breakpoint-up(lg) {
+      height: 48px;
+      margin: 0;
+      padding: 0;
+      width: 50%;
+      display: block;
+    }
+  }
+
+  &__info__register__submit {
+    margin: 8px 0;
+    border: 2px solid $grey;
+    background-color: $white;
+    border-radius: 50px;
+    width: 230px;
+    height: 50px;
+    font-size: 2rem;
+    font-weight: 700;
+    color: $black;
+
+    @include breakpoint-up(lg) {
+      flex-basis: 100%;
+    }
+  }
+}
