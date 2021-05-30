@@ -1,0 +1,15 @@
+.blog {
+  &__container {
+    max-width: 980px !important;
+  }
+
+  &__title {
+    font-size: 2.5rem;
+    line-height: 1.4;
+    letter-spacing: normal;
+  }
+
+  &__content {
+    margin-top: 34px;
+  }
+}
