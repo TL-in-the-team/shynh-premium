@@ -1,11 +1,11 @@
 <?php
-function tin_tuc_post_type()
+function short_code_post_type()
 {
  
 
     $label = array(
         'name' => __('Shortcode',SHYNH), 
-        'singular_name' => __('Bài Viết',SHYNH)
+        'singular_name' => __('Shortcode',SHYNH)
     );
  
     $args = array(
@@ -43,9 +43,9 @@ function tin_tuc_post_type()
  
     );
  
-    register_post_type('tin-tuc', $args); 
+    register_post_type('shortcode', $args); 
 
 }
 
 
-add_action('init', 'tin_tuc_post_type');
+add_action('init', 'short_code_post_type');

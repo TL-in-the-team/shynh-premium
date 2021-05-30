@@ -4,6 +4,7 @@
   }
   &__title {
   }
+
   &__list {
     @include breakpoint-up("md") {
       @include flex;
@@ -26,8 +27,19 @@
       width: 33.333%;
       padding: 21px 16px;
     }
+    &.gift {
+      .news-news__item__title {
+        border: 1px solid $grey;
+        margin: 0;
+        padding: 16px 0;
+        text-align: center;
+      }
+    }
     &__img-link {
       display: block;
+      img {
+        display: block;
+      }
     }
 
     &__img {
@@ -114,5 +126,17 @@
         margin-top: 16px;
       }
     }
+  }
+}
+.container1200 {
+  max-width: 1200px !important;
+  margin: 0 auto;
+}
+
+.promtion--subtit {
+  margin-top: 24px;
+
+  @include breakpoint-up(lg) {
+    margin-top: 132px;
   }
 }
