@@ -10,8 +10,7 @@
         <a href="<?php the_permalink();?>" class="news-blog__item__img-link">
         <img src="<?php echo get_the_post_thumbnail_url($post_id,'blog-thumb') ?>" alt="ALT" title="title" class="news-blog__item__img"></a>
         <a href="<?php the_permalink();?>" class="news-blog__item__title-link"><h2 class="news-blog__item__title"><?php the_title() ;?></h2></a>
-        <p class="news-blog__item__desc">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+        <p class="news-blog__item__desc"><?php the_excerpt(); ?></p>
       </div>
     <?php
     endwhile; endif;

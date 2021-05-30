@@ -1,5 +1,42 @@
 <?php 
+
+$shortcode_type = array(
+    0 => 'none',
+    1 => 'list_gift',
+    2 => 'promotions'
+);
+
 add_shortcode('promotion-form','promotion_form_func');
 function promotion_form_func($args){
-    return get_template_part('inc/short-code-view/promotion-form.view');
+    ob_start();
+    get_template_part('inc/short-code-view/promotion-form.view');
+    return ob_get_clean();
+}
+
+add_shortcode('list_gift', 'list_gift_func');
+function list_gift_func($args){
+    $post_id = $args['id'];
+    $post = get_post($post_id);
+    if($post):
+        ob_start();
+        get_template_part('inc/short-code-view/list-gifts.view','',array(
+            'list_gifts' => get_field('list_gifts',$post_id)
+        ));
+        return ob_get_clean();
+    endif;
+    return '';
+}
+
+add_shortcode('promotions', 'promotions_func');
+function promotions_func($args){
+    $post_id = $args['id'];
+    $post = get_post($post_id);
+    if($post):
+        ob_start();
+        get_template_part('inc/short-code-view/promotions.view','',array(
+            'promotions' => get_field('promotions',$post_id)
+        ));
+        return ob_get_clean();
+    endif;
+    return '';
 }
