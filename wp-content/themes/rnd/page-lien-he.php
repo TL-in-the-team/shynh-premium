@@ -22,12 +22,20 @@
         </div>
       </div>
       <form action="" method="POST" class="contact__info__register">
-        <input type="text" class="contact__info__register__input" placeholder="First Name">
-        <input type="text" class="contact__info__register__input" placeholder="Last Name">
-        <input type="text" class="contact__info__register__input" placeholder="E-mail">
-        <input type="text" class="contact__info__register__input" placeholder="Phone Number">
+        <div class="contact__info__register__wrapper"><input type="text" class="contact__info__register__input" placeholder="First Name">
+        </div>
+        <div class="contact__info__register__wrapper"><input type="text" class="contact__info__register__input" placeholder="Last Name">
+        </div>
+        <div class="contact__info__register__wrapper"><input type="text" class="contact__info__register__input" placeholder="E-mail">
+        </div>
+        <div class="contact__info__register__wrapper"><input type="text" class="contact__info__register__input" placeholder="Phone Number">
+        </div>
+        <div class="contact__info__register__area-wrapper">
         <textarea name="message" id="txtarea" cols="30" rows="5" class="contact__info__register__input area-input" placeholder="Message"></textarea>
+        </div>
+        <div class="contact__info__register__area-wrapper">
         <input type="submit" value="SEND MESSAGE" class="contact__info__register__submit">
+        </div>
       </form>
     </div>   
   </div>
