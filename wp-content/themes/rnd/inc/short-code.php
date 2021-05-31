@@ -40,3 +40,31 @@ function promotions_func($args){
     endif;
     return '';
 }
+
+add_shortcode('our_expert_list', 'our_expert_list_func');
+function our_expert_list_func($args){
+    $post_id = $args['id'];
+    $post = get_post($post_id);
+    if($post):
+        ob_start();
+        get_template_part('inc/short-code-view/our_expert_list.view','',array(
+            'our_expert_list' => get_field('our_expert_list',$post_id)
+        ));
+        return ob_get_clean();
+    endif;
+    return '';
+}
+
+add_shortcode('detail_expert', 'detail_expert_func');
+function detail_expert_func($args){
+    $post_id = $args['id'];
+    $post = get_post($post_id);
+    if($post):
+        ob_start();
+        get_template_part('inc/short-code-view/detail_expert.view','',array(
+            'detail_expert' => get_field('detail_expert',$post_id)
+        ));
+        return ob_get_clean();
+    endif;
+    return '';
+}
