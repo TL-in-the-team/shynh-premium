@@ -88,6 +88,14 @@
 
   &__list {
     margin-top: 76px;
+    .owl-dots {
+      display: none;
+    }
+    @include breakpoint-up(sm) {
+      .owl-dots {
+        display: block;
+      }
+    }
     @include breakpoint-up("md") {
       @include flex;
       @include flex-wrap;
@@ -100,13 +108,14 @@
     width: 100%;
     margin: 8px 0;
     text-align: center;
-
+    display: none;
+    @include breakpoint-up(sm) {
+      display: block;
+    }
     @include breakpoint-up(md) {
-      width: 50%;
       padding: 22px 15px;
     }
     @include breakpoint-up(lg) {
-      width: 25%;
       padding: 21px 15px;
     }
 
@@ -136,27 +145,102 @@
 
 .detail-expert {
   &__container {
+    max-width: 1202px !important;
   }
 
   &__list {
+    .owl-dots {
+      margin-top: 25px !important;
+      margin-bottom: 30px;
+    }
+    @include breakpoint-up(md) {
+      margin: 50px 0;
+      position: relative;
+
+      .owl-dots {
+        @include flex;
+        @include flex-direction(column);
+        position: absolute;
+        right: 44px;
+        bottom: 22px;
+      }
+    }
   }
 
   &__item {
     text-align: center;
+    @include breakpoint-up(md) {
+      @include flex;
+      padding: 58px 8px 58px 0;
+      @include align-items(center);
+    }
     &__img {
       img {
         border: 2px solid $gray;
+        width: 100% !important;
+      }
+
+      @include breakpoint-up(md) {
+        width: 60%;
       }
     }
 
     &__info {
+      @include breakpoint-up(md) {
+        width: 40%;
+        @include flex;
+        @include flex-direction(column);
+        @include justify-content(center);
+        position: relative;
+        &:after {
+          content: "";
+          position: absolute;
+          display: block;
+          width: 100%;
+          height: calc(100% + 100px);
+          @include box-shadow(0 0 10px 0 rgba(0, 0, 0, 0.1));
+          top: -50px;
+          right: 0;
+        }
+      }
     }
 
     &__info__desc {
-      font-size: 1.2rem;
-      font-weight: 400;
-      line-height: 2.5;
-      color: $black_light;
+      p {
+        font-size: 1.2rem;
+        font-weight: 400;
+        line-height: 2.5;
+        color: $black_light;
+        margin-top: 18px;
+        @include breakpoint-up(md) {
+          margin-top: 0;
+        }
+      }
+
+      @include breakpoint-up(md) {
+        margin-top: 0px;
+        padding: 0 80px;
+        position: relative;
+        &::after {
+          content: "";
+          position: absolute;
+          top: -50px;
+          left: 50%;
+          @include transform(translateX(-50%));
+          width: 72px;
+          height: 58px;
+          background-image: url(data:image/png;charset=utf-8;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAAA6CAMAAAAk2e+/AAAAVFBMVEUAAADtz4/rx2nrxmPrxmTrxmTrxmPrxmPtz43szHztzobsynPrx2frxmTrx2nrx2jrx2frx2XrxmPtz47ryGvsy3rsynTtzojtzYTszIDsyXDtzooZ4KFxAAAAEnRSTlMAIPAg1ljAQPDw8PDAQOFAQED1Gaf5AAAAv0lEQVRYw+3O2Q6CMBCFYUAKLuAC07K9/3vqXWcCPaJBKaQf3PXkz0TBth2kr3eqEjJXJ5e7dDRI5SB3hTK5U+GgcFA4aC8Hlb8+qJxzENn/4QoVYjd1EPH3wtW5i93UQSTcnAeRoEYDoop9lAhXsJNeAyRhIczHUI+wUI+9GVzWCBmEhQzmY0gjJxvS2Kchs1RI/yHUISzUYT6GWuRsQy3mY6hBWKjBfAwNyNGGBmzBUI2wUI2F0JxQDNlQjEVPiFTGzlFqBeUAAAAASUVORK5CYII=);
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: 60%;
+        }
+      }
+      @include breakpoint-up(lg) {
+        &::after {
+          top: -80px;
+          background-size: 100%;
+        }
+      }
     }
 
     &__info__name {
@@ -164,7 +248,10 @@
       font-size: 2rem;
       font-weight: 400;
       color: $black;
-      margin-top: 38px;
+      margin-top: 14px;
+      @include breakpoint-up(md) {
+        margin-top: 38px;
+      }
     }
 
     &__info__position {
@@ -172,7 +259,10 @@
       font-size: 1.5rem;
       font-weight: 400;
       color: #999999;
-      margin-top: 18px;
+      margin-top: 16px;
+      @include breakpoint-up(md) {
+        margin-top: 18px;
+      }
     }
   }
 }

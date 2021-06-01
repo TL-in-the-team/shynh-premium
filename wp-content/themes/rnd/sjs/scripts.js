@@ -103,6 +103,9 @@ kenEvents.menuEffects = function(){
     })
 }
 
+kenEvents.fixHeight = function(){
+    jQuery('.mxHeight').matchHeight();
+}
 function stringToSlug(string) {
     return string
         .toString()
@@ -168,6 +171,7 @@ jQuery(document).ready(function(){
     kenEvents.gotEffects();
     kenEvents.menuEffects();
     kenEvents.popup();
+    kenEvents.fixHeight();
 
     $('#main-slider__carousel').owlCarousel({
         items:1,
@@ -191,7 +195,7 @@ jQuery(document).ready(function(){
         dots:true,
     });
 
-    $('#ambassador__slider').owlCarousel({
+    $('#detail-experts_carousel').owlCarousel({
         items:1,
         lazyLoad: true,
         nav:false,
@@ -202,12 +206,12 @@ jQuery(document).ready(function(){
         dots:true,
     });    
     
-    $('#enjoy-difference__slider').owlCarousel({
+    $('#our-experts_carousel').owlCarousel({
         // items:1,
         lazyLoad: true,
         nav:false,
-        center:true,
-        autoWidth:true,
+        // center:true,
+        // autoWidth:true,
         loop: true,
         mouseDrag: true,
         dots:true,
@@ -215,17 +219,15 @@ jQuery(document).ready(function(){
             0:{
                 items:1,                
             },
-            767:{
-                items:1,                
-            },
-            980:{
+            580:{
                 items:2,                
             },
-            1199:{
-                items:3,
-                // center:true,
-                autoWidth:false,               
-            }
+            767:{
+                items:3,                
+            },
+            980:{
+                items:4,                
+            },
         }
     });
     

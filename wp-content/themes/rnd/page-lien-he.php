@@ -29,7 +29,7 @@
         <div class="contact__info__register__wrapper"><input type="text" class="contact__info__register__input" placeholder="E-mail">
         </div>
         <div class="contact__info__register__wrapper"><input type="text" class="contact__info__register__input" placeholder="Phone Number">
-        </div>
+        </div>               
         <div class="contact__info__register__area-wrapper">
         <textarea name="message" id="txtarea" cols="30" rows="5" class="contact__info__register__input area-input" placeholder="Message"></textarea>
         </div>

@@ -48,7 +48,7 @@ function our_expert_list_func($args){
     if($post):
         ob_start();
         get_template_part('inc/short-code-view/our_expert_list.view','',array(
-            'our_expert_list' => get_field('our_expert_list',$post_id)
+            'postdata' => $post
         ));
         return ob_get_clean();
     endif;
@@ -62,9 +62,24 @@ function detail_expert_func($args){
     if($post):
         ob_start();
         get_template_part('inc/short-code-view/detail_expert.view','',array(
-            'detail_expert' => get_field('detail_expert',$post_id)
+            'postdata' => $post
         ));
         return ob_get_clean();
     endif;
     return '';
 }
+
+add_shortcode('logo', 'logo_func');
+function logo_func($args){
+    $post_id = $args['id'];
+    $post = get_post($post_id);
+    if($post):
+        ob_start();
+        get_template_part('inc/short-code-view/logos.view','',array(
+            'postdata' => $post
+        ));
+        return ob_get_clean();
+    endif;
+    return '';
+}
+

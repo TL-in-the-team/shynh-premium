@@ -45,18 +45,18 @@ function singleJavascript(cb) {
     .pipe(browserSync.stream())
 }
 
-function includesJavascript(cb) {
-  return gulp.src(['./sjs/add-ons/*.js'])
-    .pipe(plumber({
-      errorHandler: notify.onError("Error: <%= error.message %>")
-    }))
-    .pipe(uglify())
-    .pipe(rename({
-      suffix: '.min'
-    }))
-    .pipe(gulp.dest('./js/add-ons/'))
-    .pipe(browserSync.stream())
-}
+// function includesJavascript(cb) {
+//   return gulp.src(['./sjs/add-ons/*.js'])
+//     .pipe(plumber({
+//       errorHandler: notify.onError("Error: <%= error.message %>")
+//     }))
+//     .pipe(uglify())
+//     .pipe(rename({
+//       suffix: '.min'
+//     }))
+//     .pipe(gulp.dest('./js/add-ons/'))
+//     .pipe(browserSync.stream())
+// }
 
 function myCss(cb) {
   return gulp.src(['./scss/style.scss', './scss/pages/*.scss','./scss/add-ons/*.scss'])
@@ -144,7 +144,7 @@ function myWatch() {
   );
 }
 
-const build = gulp.series(gulp.parallel( myJavascript,singleJavascript,includesJavascript,myCss,myCssAddOns));
+const build = gulp.series(gulp.parallel( myJavascript,singleJavascript,myCss,myCssAddOns));
 const watch = gulp.parallel(build, myWatch, serveSync);
 gulp.task('default', watch);
 // exports.default = watch

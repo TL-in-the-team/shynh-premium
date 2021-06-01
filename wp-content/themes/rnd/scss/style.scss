@@ -9,10 +9,12 @@
 @import "layouts/footer";
 @import "blocks/banner.block";
 @import "blocks/news.block";
+@import "blocks/logos.block";
 /*===== PAGES =====*/
 @import "pages/single";
 @import "pages/contact";
 @import "pages/about";
+@import "pages/appointment";
 // /*===== UTILITIES =====*/
 @import "utilities/animate";
 @import "utilities/hover";
