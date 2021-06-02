@@ -83,3 +83,16 @@ function logo_func($args){
     return '';
 }
 
+add_shortcode('main_slider', 'main_slider_func');
+function main_slider_func($args){
+    $post_id = $args['id'];
+    $post = get_post($post_id);
+    if($post):
+        ob_start();
+        get_template_part('inc/short-code-view/main_slider.view','',array(
+            'postdata' => $post
+        ));
+        return ob_get_clean();
+    endif;
+    return '';
+}
