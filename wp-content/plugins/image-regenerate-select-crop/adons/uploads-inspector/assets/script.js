@@ -105,6 +105,7 @@ function sirsc_adon_improf_listing(aid,pag) {
 	sirsc_improf_load_list_page(aid,pag);
 }
 
+
 jQuery(document).ready(function() {
 	jQuery('#js-sirsc-improf-trigger-assess').on('click', function() {
 		sirsc_improf_continue_each_folder_assess();
@@ -119,5 +120,4 @@ jQuery(document).ready(function() {
 		bind_sirsc_adon_improf_listing();
 		bind_sirsc_adon_improf_listing_pagination();
 	});
-
 });

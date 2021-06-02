@@ -1,14 +1,6 @@
 @include breakpoint-up(large) {
   .main-slider {
     &__wrapper {
-      .owl-dots {
-        padding-top: 46px;
-        .owl-dot {
-          span {
-            margin: 5px 5px;
-          }
-        }
-      }
     }
 
     &__item {
