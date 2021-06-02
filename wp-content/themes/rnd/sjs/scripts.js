@@ -219,6 +219,32 @@ jQuery(document).ready(function(){
             },
         }
     });
+
+    $('#enjoy-the-difference__slider').owlCarousel({
+        // items:1,
+        lazyLoad: true,
+        nav:false,
+        center:true,
+        loop: true,
+        mouseDrag: true,
+        dots:true,
+        responsive:{
+            0:{
+                items:1,     
+                stagePadding: 50,           
+            },
+            767:{
+                items:2,    
+                margin: 14,        
+            },
+            991:{
+                items:2,              
+            },
+            1199:{
+                items:3,              
+            }
+        }
+    });
     
 })
 jQuery(function () {

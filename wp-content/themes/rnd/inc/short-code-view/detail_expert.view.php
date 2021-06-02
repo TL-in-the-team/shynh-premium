@@ -30,7 +30,7 @@ if( have_rows('detail_expert',$postdata->ID) ):
       ?>
       <div class="detail-expert__item">
         <picture class="detail-expert__item__img mxHeight">          
-          <source media="(min-width:767px)" src="<?php echo imageEncodeURL($url);?>" title="<?php echo $title ?>" alt="<?php echo $alt ?>" width="<?php echo $width ?>" height="<?php echo $height ?>">
+          <source media="(min-width:767px)" srcset="<?php echo imageEncodeURL($url);?>" title="<?php echo $title ?>" alt="<?php echo $alt ?>" width="<?php echo $width ?>" height="<?php echo $height ?>">
           <img src="<?php echo imageEncodeURL($m_url);?>" title="<?php echo $m_title ?>" alt="<?php echo $m_alt ?>" width="<?php echo $m_width ?>" height="<?php echo $m_height ?>">
         </picture>
         <div class="detail-expert__item__info mxHeight">
