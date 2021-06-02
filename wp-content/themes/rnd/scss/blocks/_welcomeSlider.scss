@@ -1,0 +1,39 @@
+.welcome {
+  &__title {
+    margin-top: 65px;
+  }
+  &__desc {
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 0 8px;
+    margin-top: 20px;
+  }
+
+  &__slider-showcase-wrapper {
+  }
+
+  &__slider {
+    margin-top: 18px;
+  }
+
+  &__item {
+    position: relative;
+    &__img {
+    }
+
+    &__desc {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 46px;
+      background-color: rgba($color: #c1c2c5, $alpha: 0.97);
+      text-align: center;
+      line-height: 46px;
+      font-weight: 700;
+      font-size: 2rem;
+      color: #fff;
+      letter-spacing: 0.3rem;
+    }
+  }
+}

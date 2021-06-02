@@ -96,3 +96,17 @@ function main_slider_func($args){
     endif;
     return '';
 }
+
+add_shortcode('welcome_slider', 'welcome_slider_func');
+function welcome_slider_func($args){
+    $post_id = $args['id'];
+    $post = get_post($post_id);
+    if($post):
+        ob_start();
+        get_template_part('inc/short-code-view/welcome_slider.view','',array(
+            'postdata' => $post
+        ));
+        return ob_get_clean();
+    endif;
+    return '';
+}

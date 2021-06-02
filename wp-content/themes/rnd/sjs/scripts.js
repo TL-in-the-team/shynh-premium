@@ -173,7 +173,7 @@ jQuery(document).ready(function(){
     kenEvents.popup();
     kenEvents.fixHeight();
 
-    $('#main-slider__carousel').owlCarousel({
+    $('.slider__carousel').owlCarousel({
         items:1,
         lazyLoad: true,
         nav:false,
@@ -182,18 +182,7 @@ jQuery(document).ready(function(){
         loop: true,
         mouseDrag: true,
         dots:true,
-    });
-
-    $('#welcome__carousel').owlCarousel({
-        items:1,
-        lazyLoad: true,
-        nav:false,
-        // center:true,
-        // autoWidth:true,
-        loop: true,
-        mouseDrag: true,
-        dots:true,
-    });
+    });    
 
     $('#detail-experts_carousel').owlCarousel({
         items:1,
