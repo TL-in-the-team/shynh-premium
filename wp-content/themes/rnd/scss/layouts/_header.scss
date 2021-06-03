@@ -12,9 +12,12 @@
     @include transition_default(0.3s);
   }
   &__fixed {
+    border-bottom: 1px solid $gray;
     .container {
       @include breakpoint-up("md") {
-        @include flex;
+      @include flex;
+      @include justify-content(space-between);
+      @include align-items('center');
         .header__logo {
           img {
             width: 100px;
@@ -35,69 +38,71 @@
         padding: 0 24px;
         border-bottom: 1px solid $white_grey;
       }
-      .header__menu {
-        list-style-type: none;
-        @include flex;
-        @include justify-content(center);
-        .current-menu-item {
-        }
-        .menu-item {
-          &.current-menu-item,
-          &:hover {
-            > a {
-              &:after {
-                width: 100%;
-              }
-            }
-          }
+    }
+  }
+  .header__menu {
+    @include breakpoint-up("md") {
+      list-style-type: none;
+      @include flex;
+      @include justify-content(center);
+      .current-menu-item {
+      }
+      .menu-item {
+        &.current-menu-item,
+        &:hover {
           > a {
             &:after {
-              content: "";
-              position: absolute;
-              bottom: -1.5px;
-              left: 0;
-              width: 0;
-              height: 3px;
-              background-color: $black;
-              @include transition_default(0.3s);
+              width: 100%;
             }
-          }
-          a {
-            text-transform: uppercase;
-            font-size: 2rem;
-            font-weight: 500;
-            padding: 16px 24px;
-            display: block;
-            position: relative;
           }
         }
-        .menu-item-has-children {
-          position: relative;
-          &:hover {
-            .sub-menu {
-              height: auto;
-            }
-          }
-          .sub-menu {
-            overflow: hidden;
+        > a {
+          &:after {
+            content: "";
             position: absolute;
-            width: 320px;
-            text-align: left;
-            padding-top: 20px;
-            height: 0;
-            .menu-item {
-              border: 1px solid $black_light;
-              border-top: 0;
-              background: $gray;
-              &:hover {
-                a {
-                  background: $yellow;
-                  color: $white;
-                }
+            bottom: -1.5px;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background-color: $black;
+            @include transition_default(0.3s);
+          }
+        }
+        a {
+          text-transform: uppercase;
+          font-size: 2rem;
+          font-weight: 500;
+          padding: 16px 24px;
+          display: block;
+          position: relative;
+        }
+      }
+      .menu-item-has-children {
+        position: relative;
+        &:hover {
+          .sub-menu {
+            height: auto;
+          }
+        }
+        .sub-menu {
+          overflow: hidden;
+          position: absolute;
+          width: 320px;
+          text-align: left;
+          padding-top: 20px;
+          height: 0;
+          .menu-item {
+            border: 1px solid $black_light;
+            border-top: 0;
+            background: $gray;
+            &:hover {
+              a {
+                background: $yellow;
+                color: $white;
               }
-              &:first-child {
-                border-top: 1px solid $black_light;
-              }
+            }
+            &:first-child {
+              border-top: 1px solid $black_light;
             }
           }
         }

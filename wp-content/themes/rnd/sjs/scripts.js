@@ -14,6 +14,17 @@ kenEvents.menu = function () {
         jQuery(this).toggleClass('actived');
         return false;
     })
+    jQuery(window).scroll(function () {
+        if(jQuery(this).scrollTop() > 400){
+            if(jQuery('.header').hasClass('header__normal') == true){
+                jQuery('.header').removeClass('header__normal').addClass('header__fixed');
+            }
+        }else{
+            if(jQuery('.header').hasClass('header__fixed') == true){
+                jQuery('.header').removeClass('header__fixed').addClass('header__normal');
+            }
+        }
+    })
 }
 kenEvents.scrollToId = function () {
     jQuery('a[href*="#"]:not([href="#"])').click(function () {
@@ -23,9 +34,6 @@ kenEvents.scrollToId = function () {
             if (target.length) {
                 if (jQuery('.header__buttons').hasClass('actived')){
                     jQuery('.header__buttons').removeClass('actived');
-                }
-                if (jQuery('.header__menu').hasClass('actived')) {
-                    jQuery('.header__menu').removeClass('actived');
                 }
                 jQuery('html, body').animate({
                     scrollTop: target.offset().top - 70
