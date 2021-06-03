@@ -4,6 +4,7 @@
   left: 0;
   width: 100%;
   background: #fff;
+  z-index: 999;
   @include breakpoint-down("md") {
     padding: 8px 0;
   }
@@ -25,6 +26,8 @@
   }
   &__normal {
     @include breakpoint-up("md") {
+      position: absolute;
+      z-index: 9;
       text-align: center;
       .header__menuround {
         margin: 50px auto 0 auto;
