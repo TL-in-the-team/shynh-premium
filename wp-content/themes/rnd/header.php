@@ -16,7 +16,7 @@ global $home_id;
 </head>
 
 <body <?php body_class() ?>><span class="toppoint"></span>
-<header class="header header__normal">
+<header class="header header__normal animate__animated animate__fadeIn">
     <div class="container">
         <a href="<?php bloginfo('home') ?>" title="<?php bloginfo('name') ?>" class="header__logo">
             <img src="<?php echo imageEncode('/images/icon-shynh-premium.png') ?>" width="180" height="150" alt="<?php bloginfo('name') ?>" title="<?php bloginfo('name') ?>"/>

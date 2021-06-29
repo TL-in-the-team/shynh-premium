@@ -1,7 +1,5 @@
 <?php get_header(); ?>
-<section class="page">
-  <div class="container">
-    <?php the_content(); ?>
-  </div>
-</section>
+<div class="container">
+  <?php the_content(); ?>
+</div>
 <?php get_footer(); ?>

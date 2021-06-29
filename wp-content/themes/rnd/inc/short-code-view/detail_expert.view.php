@@ -4,7 +4,6 @@ if( have_rows('detail_expert',$postdata->ID) ):
 ?>
 
 <section class="detail-expert">
-  <div class="container detail-expert__container">
     <div id="detail-experts_carousel" class="detail-expert__list owl-carousel owl-theme">
       <?php
         while( have_rows('detail_expert',$postdata->ID) ) : the_row();
@@ -35,15 +34,14 @@ if( have_rows('detail_expert',$postdata->ID) ):
         </picture>
         <div class="detail-expert__item__info mxHeight">
           <div class="detail-expert__item__info__desc"><?php echo $desc ?></div>
-          <span class="detail-expert__item__info__name"><?php echo $name ?></span>
-          <span class="detail-expert__item__info__position"><?php echo $position ?></span>
+          <strong class="detail-expert__item__info__name"><?php echo $name ?></strong>
+          <div class="detail-expert__item__info__position"><?php echo $position ?></div>
         </div>
       </div>
       <?php
         endwhile;
       ?>  
     </div>
-  </div>
 </section>
 
 <?php 

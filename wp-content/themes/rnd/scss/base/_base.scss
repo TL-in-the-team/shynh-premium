@@ -392,21 +392,42 @@ img {
 }
 .button-more {
   display: block;
-  height: 50px;
   width: 266px;
   border: 2px solid #f2f2f2;
   border-radius: 50px;
   text-align: center;
-  line-height: 50px;
+  line-height: 1.3;
+  padding: 16px;
+  box-sizing: border-box;
   font-size: 1.3rem;
   font-weight: 700;
   color: #333333;
   letter-spacing: 0.1125rem;
   @include transition(0.3s);
+  text-transform: uppercase;
+  max-width: 100%;
   &:hover {
     background-color: $yellow;
     color: #fff !important;
   }
+}
+#breadcrumbs{
+  border-top: 1px solid $gray;
+  margin: 32px 0 0 0;
+  border-bottom: 1px solid $gray;
+  @include breakpoint-up(md) {
+    text-align: center;
+  }
+  a,span{
+    font-size: 1rem;
+    text-transform: uppercase;
+    @include breakpoint-up(md) {
+      font-size: 1.5rem;
+    }
+  }
+}
+.button{
+
 }
 
 //Reuse the carousel dots section

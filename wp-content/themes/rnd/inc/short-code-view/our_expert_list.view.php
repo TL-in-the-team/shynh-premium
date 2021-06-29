@@ -4,7 +4,7 @@ if( have_rows('our_experts',$postdata->ID) ):
 ?>
 
 <section class="our-experts">
-    <div  class="container our-experts__container ">
+    <div  class="our-experts__container ">
         <div id="our-experts_carousel" class="our-experts__list owl-carousel owl-theme">
             <?php
                 while( have_rows('our_experts',$postdata->ID) ) : the_row();

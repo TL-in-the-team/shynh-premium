@@ -1,4 +1,4 @@
-<footer class="footer">
+<footer class="footer animate__animated animate__fadeIn">
     <div class="container">
         <?php 
             if(is_active_sidebar( 'sidebar-footer' ) ):

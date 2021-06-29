@@ -3,7 +3,7 @@ extract($args);
 if( have_rows('main_slider',$postdata->ID) ):
 ?>
 
-<session class="main-slider">
+<session class="main-slider animate__animated animate__fadeIn">
   <div class="main-slider__wrapper slider__carousel owl-carousel owl-theme">
     <?php
       
@@ -30,7 +30,7 @@ if( have_rows('main_slider',$postdata->ID) ):
     <a href="<?php echo $link ?>" class="main-slider__item">
       <picture class="main-slider__item__img-wrapper ">          
           <source media="(min-width:992px)" srcset="<?php echo imageEncodeURL($url);?>" title="<?php echo $title ?>" alt="<?php echo $alt ?>">
-          <img src="<?php echo imageEncodeURL($m_url);?>" height="<?php echo $height ?>" width="<?php echo $width ?>" title="<?php echo $title ?>" alt="<?php echo $alt ?>" >
+          <img src="<?php echo imageEncodeURL($m_url);?>" height="600" width="1722" title="<?php echo $title ?>" alt="<?php echo $alt ?>" >
       </picture>      
     </a>
     <?php

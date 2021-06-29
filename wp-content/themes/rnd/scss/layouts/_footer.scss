@@ -1,5 +1,9 @@
 .footer{
     background: $gray;
+    margin-top: 32px;
+    @include breakpoint-up('md') {
+        margin-top: 60px;
+    }
     .container{
         @include breakpoint-up('md') {
             @include flex;
@@ -61,7 +65,7 @@
     }
 }
 .form{
-    &__email{
+    &__input{
         border: 1px solid $grey;
         @include flex;
         input{

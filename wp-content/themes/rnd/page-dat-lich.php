@@ -1,6 +1,6 @@
 <?php get_header() ?>
 <section class="appointment">
-<h1 class="appointment__title maintit">Make An Appointment</h1>
+<h1 class="appointment__title maintit"><?php the_title(); ?></h1>
   <div class="container appointment__container">
     <form action="" method="POST" class="appointment__register">        
         <div class="appointment__register__wrapper">        

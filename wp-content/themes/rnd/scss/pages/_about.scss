@@ -4,7 +4,7 @@
     margin-top: 22px;
     margin-bottom: 50px;
     @include breakpoint-up(lg) {
-      margin-top: 52px;
+      margin: 52px auto 0 auto;
     }
   }
 
@@ -83,7 +83,10 @@
   }
 
   &__container {
-    max-width: 1202px !important;
+    @include breakpoint-up(lg) {
+      max-width: 1202px !important;
+      margin: 52px auto 0 auto;
+    }
   }
 
   &__list {
@@ -274,5 +277,8 @@
 }
 
 .brand-ambassador__container {
-  margin-top: 222px;
+  margin-top: 60px;
+  @include breakpoint-up(md) {
+    margin-top: 120px;
+  }
 }
